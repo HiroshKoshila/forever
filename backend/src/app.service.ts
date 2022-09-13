@@ -20,7 +20,7 @@ export class AppService {
         map((response) => response.data),
         map((data) => ({
           ...this.data[params.name],
-          name: data.name.toString(),
+          name: data.name,
           dependencies: data.dependencies,
           scripts: data.scripts.lint,
         })),
