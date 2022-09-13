@@ -20,9 +20,9 @@ export class AppService {
         map((response) => response.data),
         map((data) => ({
           ...this.data[params.name],
-          name: data.name,
+          name: data.name.toString(),
           dependencies: data.dependencies,
-          scripts: data.scripts,
+          scripts: data.scripts.lint,
         })),
       );
   }
