@@ -22,6 +22,7 @@ export class AppService {
           ...this.data[params.name],
           name: data.name,
           dependencies: data.dependencies,
+          scripts: data.scripts,
         })),
       );
   }
