@@ -6,14 +6,11 @@ import { map } from 'rxjs';
 export class AppService {
   private data = {
     forever: {},
-    forever2: {
-      gitfollowers: 600,
-    },
   };
 
   constructor(private httpService: HttpService) {}
 
-  getUser(params) {
+  getJsonInfo(params) {
     return this.httpService
       .get(`http://registry.npmjs.org/${params.name}/latest`)
       .pipe(

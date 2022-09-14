@@ -6,7 +6,7 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get(':name')
-  getUser(@Param() params) {
-    return this.appService.getUser(params);
+  getJsonInfo(@Param() params) {
+    return this.appService.getJsonInfo(params);
   }
 }
