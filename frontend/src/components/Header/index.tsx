@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
 import Switch from "react-switch";
 import { ThemeContext } from 'styled-components';
- 
+import logo from '../Home/logo.png';
+
 import { Container } from './styles';
 
 interface Props{
@@ -14,7 +15,8 @@ const { colors, title } = useContext(ThemeContext);
 
     return (
         <Container>
-            <div className="">Together We</div>
+            {/* <img src={logo} alt="logo" className="header-image"/> */}
+            <div>Together We</div>
 
             <Switch
             onChange={toggleTheme}
