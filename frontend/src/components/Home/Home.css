@@ -2,6 +2,8 @@
     height: 400px;
     background: linear-gradient(144.41deg, #818BE9 47.54%, #E47FDA 91.07%);
     border-radius: 20px;
+    margin-left: 25px;
+    margin-right: 25px;
  }
 
 .header-image {
@@ -66,11 +68,13 @@
     font-size: 20px;
     color: white;
     background: #818BE9;
+    border: 1px solid #818BE9;
 }
 
 .btn-card:hover {
-    color: white;
-    background: black;
+    color: black;
+    border: 1px solid #818BE9;
+    background: rgb(137, 116, 211);
 }
 
 .progress-bar-style {

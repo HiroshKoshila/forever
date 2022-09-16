@@ -1,8 +1,9 @@
 import React from "react";
+import './Form.css';
 
 const Form: React.FC = () => {
     return (
-        <div className="form">
+        <div className="form-content">
             <div className="row-col-2">
                 <h5>Select the amount that you want to donate</h5>
             </div>

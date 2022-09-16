@@ -19,8 +19,8 @@
 }
 
 .btn-card:hover {
-    color: white;
-    background: black;
+    color: #000;
+    background: #3e4fe6;
 }
 
 .progress-bar-style {
