@@ -8,3 +8,5 @@ to test the app.controller give the 'npm run test:watch' command on backend
 #frontend - 
 Frontend goes with typescript and react js
 you should run 'npm install' command to install node modules and other dependencies.
+I added 'styled-components' to do the changes of the active mode(dark and light mode)
+I used 'react-switch' to change the mode
