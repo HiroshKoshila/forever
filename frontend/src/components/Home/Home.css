@@ -1,0 +1,47 @@
+ .header-card {
+    height: 400px;
+    padding: 10px;
+    background: linear-gradient(144.41deg, #818BE9 47.54%, #E47FDA 91.07%);
+    border-radius: 20px;
+ }
+
+.header-image {
+    float: left;
+    height: auto;
+    width: 25%;
+    margin-right: 20px;
+}
+
+.card-body-content {
+    padding: 20px;
+    color: #fff;
+}
+
+.card-title {
+    font-size: 60px;
+}
+
+.btn-started {
+    color: black;
+    background-color: #fff;
+    margin-top: 20px;
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+}
+
+.btn-started:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+.card-project {
+    text-align: center;
+    font-size: 20px;
+}
+
+.project-logo {
+    width: 5%;
+}

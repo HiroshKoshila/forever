@@ -24,8 +24,8 @@ const { colors, title } = useContext(ThemeContext);
             height={10}
             width={40}
             handleDiameter={20}
-            offColor={colors.text}
             onColor={colors.secondary}
+            offColor={colors.primary}
             />
         </Container>
     );

@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { ThemeProvider } from 'styled-components';
 import Header from './components/Header/index';
 import GlobalStyle from './styles/global';
-// import Home from './components/Home';
+import Home from './components/Home/Home';
 
 import light from './styles/themes/light';
 import dark from './styles/themes/dark';
@@ -19,7 +19,7 @@ const toggleTheme = () => {
     <div className="App" >
       <GlobalStyle/>
       <Header toggleTheme={toggleTheme}/>
-          {/* <Home /> */}
+          <Home />
     </div>
     </ThemeProvider>
 
