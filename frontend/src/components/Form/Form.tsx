@@ -4,6 +4,9 @@ const Form: React.FC = () => {
     return (
         <div className="form">
             <div className="row-col-2">
+                <h5>Select the amount that you want to donate</h5>
+            </div>
+            <div className="row-col-2">
                 <input type="radio" value="1" id="cat_1" name="cat_1" />
                 <label>$10</label>
             </div>
@@ -23,7 +26,6 @@ const Form: React.FC = () => {
                 <input type="radio" value="5" id="cat_5" name="cat_5" />
                 <label>$1000</label>
             </div>
-            <button className="btn btn-card">Pay Now</button>
         </div>
     );
 }

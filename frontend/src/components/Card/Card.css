@@ -22,3 +22,8 @@
     color: white;
     background: black;
 }
+
+.progress-bar-style {
+    width: 400px;
+    padding-bottom: 5px;
+}

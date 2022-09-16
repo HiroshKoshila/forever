@@ -1,12 +1,32 @@
 import * as React from 'react';
+import {useState} from 'react';
+
 import Logo from './logo.png';
 import image1 from './image1.jpg';
 import image2 from './image2.jpg';
 import image3 from './image3.jpg';
 import './Home.css';
 
-export default class Counter extends React.Component {
-  render () {
+import Card from '../Card/Card';
+import Form from '../Form/Form';
+import Done from '../Done/Done';
+
+function Home() {
+
+    const [page, setPage] = useState(0);
+
+    const CardTitle = ["Card","Form","Done"];
+
+    const PageDisplay = () => {
+      if(page === 0){
+        return <Card/>;
+      } else if (page === 1){
+        return <Form/>
+      } else {
+        return <Done/>
+      }
+    } 
+
     return (
       <div>
         <div className="row">
@@ -45,18 +65,24 @@ export default class Counter extends React.Component {
         <div className="row row-cols-1 row-cols-md-3 g-4">
             <div className="col">
               <div className="card">
-                <div className="body">
-                <img src={image1} className="card-img-top" alt="image1"/>
                 <div className="card-body">
-                  <h6 className="card-title-image">Build School Wellawaya Sri Lanka</h6>
-                  <div className="progress-bar-linear-wrap">
-                      <div className="progress-bar-linear" data-gradient="">
-                        <span className="progress-value">72</span>
-                        <span className="progress-marker"></span></div>
-                  </div>
-                  <h3 className="card-text-body">$6900</h3><p className="card-text-raised">Raised</p>
-                  <button className="btn btn-card">Donate Now</button>
-                </div>
+                {PageDisplay()}
+                  { page === 1 ? <button className="btn btn-card" 
+                    onClick={() => { 
+                    setPage((currPage) => currPage - 1);
+                    }}>Prev</button> : '' }
+
+                  <button className="btn btn-card"
+                    onClick={() => { 
+                      if (page===CardTitle.length - 1) {
+                        alert("Successfully Donated!");
+                        setPage((currPage) => currPage - 2);
+                      } else {
+                        setPage((currPage) => currPage + 1);
+                      }
+                    }}>{ page === 0 ? "Donate Now" : '' }
+                    { page === 1 ? "Pay Now" : '' }
+                    { page === 2 ? "Done" : '' }</button>
                 </div>
               </div>
             </div>
@@ -65,11 +91,7 @@ export default class Counter extends React.Component {
                 <img src={image2} className="card-img-top" alt="image2"/>
                 <div className="card-body">
                   <h6 className="card-title-image">Build School Wellawaya Sri Lanka</h6>
-                  <div className="progress-bar-linear-wrap">
-                      <div className="progress-bar-linear" data-gradient="">
-                        <span className="progress-value">72</span>
-                        <span className="progress-marker"></span></div>
-                  </div>                  
+                  <progress value = "72" max = "100" className="progress-bar-style"/>                
                   <h3 className="card-text-body">$6900</h3><p className="card-text-raised">Raised</p>
                   <button className="btn btn-card">Donate Now</button>
                 </div>
@@ -77,16 +99,24 @@ export default class Counter extends React.Component {
             </div>
             <div className="col">
               <div className="card">
-                <img src={image3} className="card-img-top" alt="image3"/>
                 <div className="card-body">
-                <h6 className="card-title-image">Build School Wellawaya Sri Lanka</h6>
-                <div className="progress-bar-linear-wrap">
-                      <div className="progress-bar-linear" data-gradient="">
-                        <span className="progress-value">72</span>
-                        <span className="progress-marker"></span></div>
-                  </div>                  
-                  <h3 className="card-text-body">$6900</h3><p className="card-text-raised">Raised</p>
-                  <button className="btn btn-card">Donate Now</button>
+                {PageDisplay()}
+                  { page === 1 ? <button className="btn btn-card" 
+                    onClick={() => { 
+                    setPage((currPage) => currPage - 1);
+                    }}>Prev</button> : '' }
+
+                  <button className="btn btn-card"
+                    onClick={() => { 
+                      if (page===CardTitle.length - 1) {
+                        alert("Successfully Donated!");
+                        setPage((currPage) => currPage - 2);
+                      } else {
+                        setPage((currPage) => currPage + 1);
+                      }
+                    }}>{ page === 0 ? "Donate Now" : '' }
+                    { page === 1 ? "Pay Now" : '' }
+                    { page === 2 ? "Done" : '' }</button>
                 </div>
               </div>
             </div>
@@ -95,11 +125,7 @@ export default class Counter extends React.Component {
                 <img src={image1} className="card-img-top" alt="image4"/>
                 <div className="card-body">
                 <h6 className="card-title-image">Build School Wellawaya Sri Lanka</h6>
-                <div className="progress-bar-linear-wrap">
-                      <div className="progress-bar-linear" data-gradient="">
-                        <span className="progress-value">72</span>
-                        <span className="progress-marker"></span></div>
-                  </div>                  
+                  <progress value = "72" max = "100" className="progress-bar-style"/>                
                   <h3 className="card-text-body">$6900</h3><p className="card-text-raised">Raised</p>
                   <button className="btn btn-card">Donate Now</button>
                 </div>
@@ -107,16 +133,24 @@ export default class Counter extends React.Component {
             </div>
             <div className="col">
               <div className="card">
-                <img src={image2} className="card-img-top" alt="image4"/>
                 <div className="card-body">
-                <h6 className="card-title-image">Build School Wellawaya Sri Lanka</h6>
-                <div className="progress-bar-linear-wrap">
-                      <div className="progress-bar-linear" data-gradient="">
-                        <span className="progress-value">72</span>
-                        <span className="progress-marker"></span></div>
-                  </div>                  
-                  <h3 className="card-text-body">$6900</h3><p className="card-text-raised">Raised</p>
-                  <button className="btn btn-card">Donate Now</button>
+                {PageDisplay()}
+                  { page === 1 ? <button className="btn btn-card" 
+                    onClick={() => { 
+                    setPage((currPage) => currPage - 1);
+                    }}>Prev</button> : '' }
+
+                  <button className="btn btn-card"
+                    onClick={() => { 
+                      if (page===CardTitle.length - 1) {
+                        alert("Successfully Donated!");
+                        setPage((currPage) => currPage - 2);
+                      } else {
+                        setPage((currPage) => currPage + 1);
+                      }
+                    }}>{ page === 0 ? "Donate Now" : '' }
+                    { page === 1 ? "Pay Now" : '' }
+                    { page === 2 ? "Done" : '' }</button>
                 </div>
               </div>
             </div>
@@ -125,25 +159,17 @@ export default class Counter extends React.Component {
                 <img src={image3} className="card-img-top" alt="image4"/>
                 <div className="card-body">
                 <h6 className="card-title-image">Build School Wellawaya Sri Lanka</h6>
-                <div className="progress-bar-linear-wrap">
-                      <div className="progress-bar-linear" data-gradient="">
-                        <span className="progress-value">72</span>
-                        <span className="progress-marker"></span></div>
-                  </div>                  
-                  <h3 className="card-text-body">$6900</h3><p className="card-text-raised">Raised</p>
+                <progress value = "72" max = "100" className="progress-bar-style"/>                
+                  <h3 className="card-text-body">$6900</h3>
+                  <p className="card-text-raised">Raised</p>
                   <button className="btn btn-card">Donate Now</button>
                 </div>
               </div>
-            </div>
-            <div className="col">
-              <div className="title">
-              </div>
-              <div className="body">                
-                  <button className="btn btn-card">Donate Now</button>
-                </div>
             </div>
           </div>
       </div>
     );
   }
-}
+
+
+  export default Home;

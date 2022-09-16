@@ -1,17 +1,16 @@
 import React from "react";
 import './Card.css'
+import image from './image.jpg';
 
 const Form: React.FC = () => {
     return (
         <div>
-            <h6 className="card-title-image">Build School Wellawaya Sri Lanka</h6>
-            <div className="progress-bar-linear-wrap">
-                <div className="progress-bar-linear" data-gradient="">
-                <span className="progress-value">72</span>
-                <span className="progress-marker"></span></div>
-            </div>
-            <h3 className="card-text-body">$6900</h3><p className="card-text-raised">Raised</p>
-            <button className="btn btn-card">Donate Now</button>
+                <img src={image} className="card-img-top" alt="image1"/>
+                  <h6 className="card-title-image">Build School Wellawaya Sri Lanka</h6>
+                  <div className="progress-bar-linear-wrap">
+                  <progress value = "72" max = "100" className="progress-bar-style"/>                
+                  </div>
+                  <h3 className="card-text-body">$6900</h3><p className="card-text-raised">Raised</p>
         </div>
     );
 }
